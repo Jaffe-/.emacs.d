@@ -37,13 +37,13 @@
 (req-package zenburn-theme
 	:if (display-graphic-p)
 	:config
-	(load-theme 'zenburn-theme))
+	(load-theme 'zenburn t))
 
 (req-package gotham-theme
 	:if (display-graphic-p)
 	:disabled
 	:config
-	(load-theme 'gotham-theme))
+	(load-theme 'gotham t))
 
 (req-package soft-charcoal-theme
   :if (display-graphic-p)
