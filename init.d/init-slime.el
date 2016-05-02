@@ -4,7 +4,7 @@
   (setq inferior-lisp-program "sbcl"))
 
 (req-package ac-slime
-  :require (auto-complete slime)
+  :require (auto-complete slime-autoloads)
   :config
   (add-hook 'slime-mode-hook 'set-up-slime-ac)
   (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)

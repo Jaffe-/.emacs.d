@@ -1,5 +1,5 @@
 (req-package auto-complete
-  :require (goto-chg-1.6 auto-complete-config)
+  :require (auto-complete-config)
   :config
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
   (ac-config-default)
