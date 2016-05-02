@@ -26,28 +26,10 @@
 (global-hl-line-mode t)
 
 ; Font size
-(defun set-font-height (size)
-  (interactive (list
-                (read-number "Font height: "
-                             (face-attribute 'default :height))))
-  (set-face-attribute 'default nil :height size))
-
-(set-font-height 110)
-
-(req-package zenburn-theme
-	:if (display-graphic-p)
-	:config
-	(load-theme 'zenburn t))
-
-(req-package gotham-theme
-	:if (display-graphic-p)
-	:disabled
-	:config
-	(load-theme 'gotham t))
+(set-frame-font "DejaVu Sans Mono-11" nil t)
 
 (req-package soft-charcoal-theme
   :if (display-graphic-p)
-	:disabled
   :config
   (load-theme 'soft-charcoal t))
 
