@@ -34,9 +34,20 @@
 
 (set-font-height 110)
 
+(req-package zenburn-theme
+	:if (display-graphic-p)
+	:config
+	(load-theme 'zenburn-theme))
+
+(req-package gotham-theme
+	:if (display-graphic-p)
+	:disabled
+	:config
+	(load-theme 'gotham-theme))
+
 (req-package soft-charcoal-theme
   :if (display-graphic-p)
-
+	:disabled
   :config
   (load-theme 'soft-charcoal t))
 

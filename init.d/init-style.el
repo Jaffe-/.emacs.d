@@ -1,23 +1,17 @@
-(setq-default indent-tabs-mode nil)
+;;(setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-
-;; C++
-(c-add-style "my-cc-style"
-    '("cc-mode"
-      (c-offsets-alist . ((innamespace . [0])))))
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (defun my-c-mode-common-hook ()
-  (setq c-basic-offset tab-width)
-  (setq c-indent-level tab-width)
-  (c-set-offset 'substatement-open 0)
-  (c-set-style "my-cc-style"))
+  (setq c-basic-offset 2)
+  (setq c-indent-level 2)
+  (c-set-offset 'substatement-open 0))
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 (add-hook 'c++-mode-hook
-      '(lambda()
+     '(lambda()
         (font-lock-add-keywords
          nil '(;; complete some fundamental keywords
            ("\\<\\(void\\|unsigned\\|signed\\|char\\|short\\|bool\\|int\\|long\\|float\\|double\\)\\>" . font-lock-keyword-face)
