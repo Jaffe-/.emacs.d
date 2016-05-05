@@ -1,11 +1,11 @@
-;;(setq-default indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (defun my-c-mode-common-hook ()
-  (setq c-basic-offset 2)
-  (setq c-indent-level 2)
+  (setq c-basic-offset tab-width)
+  (setq c-indent-level tab-width)
   (c-set-offset 'substatement-open 0))
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
