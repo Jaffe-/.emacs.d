@@ -26,7 +26,7 @@
 (global-hl-line-mode t)
 
 ; Font size
-(set-frame-font "DejaVu Sans Mono-11" nil t)
+(set-frame-font "Dejavu sans mono 12" nil t)
 
 (req-package soft-charcoal-theme
   :if (display-graphic-p)
