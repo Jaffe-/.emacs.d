@@ -30,4 +30,11 @@
            ))
         ) t)
 
+(req-package highlight-quoted
+	:config
+	(add-hook 'lisp-mode-hook 'highlight-quoted-mode))
+
+(req-package highlight-numbers
+	:config
+	(add-hook 'prog-mode-hook 'highlight-numbers-mode))
 (provide 'init-style)
