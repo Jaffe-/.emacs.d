@@ -30,11 +30,25 @@
            ))
         ) t)
 
-(req-package highlight-quoted
-	:config
-	(add-hook 'lisp-mode-hook 'highlight-quoted-mode))
+(defun add-multiple-to-list (lst to-add)
+  (dolist (element to-add)
+    (add-to-list lst element)))
+
+(req-package lisp-extra-font-lock
+  :config
+  (add-multiple-to-list 'lisp-extra-font-lock-let-functions
+                        '("labels"
+                          "flet"
+                          "destructuring-bind"
+                          "handler-bind"))
+  (add-multiple-to-list 'lisp-extra-font-lock-defun-functions
+                        '("defmethod"
+                          "define-condition"
+                          "defclass"))
+  (lisp-extra-font-lock-global-mode 1))
 
 (req-package highlight-numbers
 	:config
 	(add-hook 'prog-mode-hook 'highlight-numbers-mode))
+
 (provide 'init-style)
