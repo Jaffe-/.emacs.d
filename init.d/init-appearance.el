@@ -26,10 +26,16 @@
 (global-hl-line-mode t)
 
 ; Font size
-(set-frame-font "Dejavu sans mono 12" nil t)
+(set-frame-font "Inconsolata 14")
+
+(req-package color-theme-sanityinc-tomorrow
+  :if (display-graphic-p)
+  :config
+  (load-theme 'sanityinc-tomorrow-night t))
 
 (req-package soft-charcoal-theme
   :if (display-graphic-p)
+  :disabled
   :config
   (load-theme 'soft-charcoal t))
 
