@@ -1,7 +1,8 @@
-(req-package slime-autoloads
+(req-package slime
+  :require (slime-autoloads)
   :config
-  (load (expand-file-name "~/quicklisp/slime-helper.el"))
-  (setq inferior-lisp-program "sbcl"))
+  (setq inferior-lisp-program "sbcl")
+  (slime-setup '(slime-fancy)))
 
 (req-package ac-slime
   :require (auto-complete slime-autoloads)
