@@ -26,7 +26,7 @@
 (global-hl-line-mode t)
 
 ; Font size
-(set-frame-font "Inconsolata 14")
+(set-frame-font "Inconsolata 15")
 
 (req-package color-theme-sanityinc-tomorrow
   :if (display-graphic-p)
