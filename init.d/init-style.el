@@ -3,6 +3,12 @@
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
+(c-add-style "linux-work-style"
+             '("cc-mode"
+               (c-basic-offset . 8)
+               (indent-tabs-mode t)
+               (tab-width . 8)))
+
 (defun my-c-mode-common-hook ()
   (setq c-basic-offset tab-width)
   (setq c-indent-level tab-width)
