@@ -25,6 +25,9 @@
 ; Highlight current line
 (global-hl-line-mode t)
 
+; Column numbers mode
+(column-number-mode t)
+
 ; Font size
 (set-frame-font "Inconsolata 15")
 
